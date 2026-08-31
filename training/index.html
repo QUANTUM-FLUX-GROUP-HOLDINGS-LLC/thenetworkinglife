@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Training Demo</title>
+  <meta name="description" content="Interactive bilingual video training demo with qualification questions and final conversion call-to-action." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+<main class="app-shell">
+  <section class="language-gate" id="languageGate" aria-label="Language selection">
+    <p class="eyebrow">Interactive Training</p>
+    <h1 class="language-title">
+      <span>Elige tu idioma</span>
+      <span>Choose your language</span>
+      <span>언어를 선택하세요</span>
+      <span>选择你的语言</span>
+    </h1>
+    <p class="hero-copy">
+      Selecciona el idioma que prefieres para ver la información completa.
+      Choose your preferred language to watch the full information.
+    </p>
+
+    <div class="language-actions">
+      <button class="language-button" type="button" data-language="es">Español</button>
+      <button class="language-button" type="button" data-language="en">English</button>
+      <button class="language-button" type="button" data-language="ko">한국어</button>
+      <button class="language-button" type="button" data-language="zh">中文</button>
+    </div>
+  </section>
+
+  <section class="hero is-hidden" id="heroSection">
+    <p class="eyebrow" id="heroEyebrow">Interactive Training Experience</p>
+    <h1 id="heroTitle">Learn, qualify, and take action.</h1>
+    <p class="hero-copy" id="heroCopy">
+      A lightweight video-based training flow with interactive qualification questions,
+      social follow buttons, and a WhatsApp conversion path.
+    </p>
+  </section>
+
+  <section class="training-card is-hidden" id="trainingCard" aria-label="Interactive video training">
+    <div class="video-wrapper">
+      <video id="player" playsinline preload="metadata" controlslist="nodownload noplaybackrate noremoteplayback" disablepictureinpicture oncontextmenu="return false;">
+        <source src="" type="video/mp4" />
+      </video>
+
+      <div class="custom-video-controls" aria-label="Video controls">
+        <button id="playPauseButton" class="video-toggle" type="button" aria-label="Play video">Play</button>
+      </div>
+
+      <div class="overlay" id="overlay" aria-live="polite">
+        <div class="overlay-content" id="overlayContent"></div>
+      </div>
+    </div>
+
+    <div class="progress-panel" aria-label="Training progress">
+      <div class="progress-copy">
+        <span id="stageLabel">Step 1 of 3</span>
+        <strong id="stageTitle">Watch the intro video</strong>
+      </div>
+      <div class="progress-track">
+        <span id="progressBar"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="social-section is-hidden" id="socialSection" aria-label="Social media links">
+    <h2 id="socialTitle">Follow us on social media</h2>
+
+    <div class="social-buttons">
+      <a class="instagram" href="#" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.9a1.1 1.1 0 1 0 0 2.2"/></svg>
+      </a>
+
+      <a class="youtube" href="#" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.5s-.2-1.7-.8-2.5c-.7-.8-1.5-.8-1.9-.9C17.7 4 12 4 12 4s-5.7 0-8.3.1c-.4 0-1.2.1-1.9.9C1.2 5.8 1 7.5 1 7.5S.8 9.6.8 11.6v.8c0 2 .2 4.1.2 4.1s.2 1.7.8 2.5c.7.8 1.7.8 2.1.9 1.5.1 6.1.1 6.1.1s5.7 0 8.3-.1c.4 0 1.2-.1 1.9-.9.6-.8.8-2.5.8-2.5s.2-2.1.2-4.1zM9.8 14.6V9.4l5.4 2.6z"/></svg>
+      </a>
+
+      <a class="x-twitter" href="#" aria-label="X">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.171l-5.214-6.817L4.99 21.75H1.687l7.738-8.835L1.254 2.25h6.817l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+
+      <a class="tiktok" href="#" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.5 3a5.5 5.5 0 0 0 4.5 2V8a8.5 8.5 0 0 1-4.5-1.4v7.1a6.3 6.3 0 1 1-6.3-6.3h1.3v3a3.3 3.3 0 1 0 3.3 3.3V3z"/></svg>
+      </a>
+
+      <a class="linkedin" href="#" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 0 0 5zM3 8.98h4v12H3zM9 8.98h3.8v1.6h.1c.5-.9 1.8-1.8 3.6-1.8 3.9 0 4.6 2.6 4.6 6v6.2h-4v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.6H9z"/></svg>
+      </a>
+
+      <a class="facebook" href="#" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.5V12H17l-.5 3h-2.7v7z"/></svg>
+      </a>
+    </div>
+  </section>
+</main>
+
+<div id="contactFloats" class="contact-floats is-hidden" aria-label="Contact options">
+  <a id="whatsappFloat" class="contact-float whatsapp-contact" href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 2.4 18.2L1 23l4.9-1.3A11.8 11.8 0 0 0 20.5 3.5Zm-8.7 17a9.4 9.4 0 0 1-4.8-1.3l-.3-.2-2.9.8.8-2.8-.2-.3A9.4 9.4 0 1 1 11.8 20.5Zm5.2-7.1c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.2-.2.3-.8.9-1 .1-.2-.2-.4-.2-.7-.1-.3-.1-1.1-.4-2.1-1.3-.8-.7-1.3-1.6-1.5-1.9-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.5.1-.2.1-.4 0-.6 0-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.4 3.7 5.8 5.1.8.3 1.5.5 2 .7.8.3 1.6.2 2.2.1.7-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3Z"/></svg>
+    <span>WhatsApp</span>
+  </a>
+
+  <a id="telegramFloat" class="contact-float telegram-contact" href="#" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.9 4.4 18.6 20c-.2 1-.8 1.2-1.6.8l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.2L6.2 13.4 1.2 11.8c-1.1-.3-1.1-1.1.2-1.6L20.8 2.7c.9-.3 1.7.2 1.1 1.7Z"/></svg>
+    <span>Telegram</span>
+  </a>
+</div>
+
+<script src="assets/video-player.js"></script>
+</body>
+</html>
