@@ -144,3 +144,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+/* ==========================================
+   LÓGICA DEL BOTÓN SCROLL TO TOP
+   ========================================== */
+document.addEventListener('DOMContentLoaded', () => {
+  const scrollTopBtn = document.getElementById('scroll-top-btn');
+  
+  if (scrollTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scrollTopBtn.classList.add('is-visible');
+      } else {
+        scrollTopBtn.classList.remove('is-visible');
+      }
+    }, { passive: true });
+
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+});
