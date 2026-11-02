@@ -416,3 +416,49 @@
     justify-content: flex-end !important; /* Alineados a la derecha */
   }
 }
+
+/* ==========================================
+   FIX GLOBAL: BOTONES FLOTANTES VISIBLES EN PC Y MÓVIL
+   ========================================== */
+
+/* 1. Asegurar que los botones estén SIEMPRE por encima del overlay del modal */
+#contactFloats {
+  z-index: 99999 !important; /* El overlay tiene 9999, así que esto lo supera */
+}
+
+/* 2. Forzar que aparezcan cuando el JS quite la clase 'is-hidden' */
+#contactFloats:not(.is-hidden) {
+  display: flex !important;
+}
+
+/* 3. Convertir los botones a círculos también en PC (ocultar texto) */
+.contact-float {
+  width: 3.5rem !important;
+  height: 3.5rem !important;
+  border-radius: 50% !important;
+  padding: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5) !important;
+}
+
+.contact-float span {
+  display: none !important; /* Ocultar el texto en PC */
+}
+
+.contact-float svg {
+  width: 1.75rem !important;
+  height: 1.75rem !important;
+  margin: 0 !important;
+}
+
+/* 4. Ajustar la posición en PC (apilados en vertical a la derecha) */
+@media (min-width: 48.01rem) {
+  #contactFloats {
+    flex-direction: column !important;
+    bottom: 2rem !important;
+    right: 2rem !important;
+    gap: 1rem !important;
+  }
+}

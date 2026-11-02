@@ -38,3 +38,4 @@ _backup/
 # Node (para cuando añadamos PostCSS)
 node_modules/
 .DS_Store
+.wrangler/
