@@ -1176,3 +1176,66 @@
     font-size: 1.25rem;
   }
 }
+
+/* ==========================================
+   SECCIÓN: CÓMO FUNCIONA (STEPS)
+   ========================================== */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+  margin-top: var(--space-7);
+}
+
+.step-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--dur) var(--ease-out), box-shadow var(--dur) var(--ease-out);
+}
+
+.step-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-2);
+  border-color: var(--brand-200);
+}
+
+.step-number {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--brand-200);
+  margin-bottom: var(--space-4);
+  opacity: 0.5;
+}
+
+.step-card h3 {
+  font-size: var(--step-1);
+  margin-bottom: var(--space-2);
+  color: var(--brand-900);
+}
+
+.step-card p {
+  color: var(--ink-500);
+  font-size: var(--step--1);
+  line-height: 1.5;
+}
+
+/* Botón Scroll Top */
+.scroll-top-btn {
+  position: fixed; bottom: 2rem; right: 2rem; width: 3.5rem; height: 3.5rem;
+  border-radius: 50%; background: var(--gold-600); color: var(--brand-950);
+  border: none; font-size: 1.5rem; font-weight: bold; cursor: pointer;
+  box-shadow: var(--shadow-2); z-index: 9999; opacity: 0; visibility: hidden;
+  transform: translateY(20px); transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.scroll-top-btn.is-visible { opacity: 1; visibility: visible; transform: translateY(0); }
+.scroll-top-btn:hover { background: var(--gold-400); transform: translateY(-3px); box-shadow: var(--shadow-3); }
+@media (max-width: 48rem) {
+  .scroll-top-btn { bottom: 5.5rem; right: 1.5rem; width: 3rem; height: 3rem; font-size: 1.25rem; }
+}
