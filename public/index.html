@@ -1,294 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Networking Life | Professional Connections That Matter</title>
-    <meta name="description" content="Building meaningful professional relationships in the digital age. Join The Networking Life community and unlock opportunities through strategic connections.">
-    <meta name="keywords" content="networking, professional connections, career growth, business relationships, entrepreneurship">
-    <meta name="author" content="The Networking Life">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://thenetworkinglife.com/">
-    <meta property="og:title" content="The Networking Life | Professional Connections That Matter">
-    <meta property="og:description" content="Building meaningful professional relationships in the digital age.">
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://thenetworkinglife.com/">
-    <meta property="twitter:title" content="The Networking Life | Professional Connections That Matter">
-    <meta property="twitter:description" content="Building meaningful professional relationships in the digital age.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Networking Life | Business Opportunities Hub</title>
+  <meta name="description" content="Discover multiple paths to financial freedom. Explore our curated business opportunities.">
+  <link rel="canonical" href="https://thenetworkinglife.com/">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/modern.css">
+  <script src="/js/i18n.js" defer></script>
+  <script src="/js/main.js" defer></script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">
-                <span class="logo-icon">🔗</span>
-                <span class="logo-text">The Networking Life</span>
-            </div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#about">About</a></li>
-                <li><a href="#benefits">Benefits</a></li>
-                <li><a href="#community">Community</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="mobile-toggle" id="mobileToggle">☰</button>
-        </div>
-    </nav>
+  <a class="skip-link" href="#main">Skip to content</a>
 
+  <header class="site-header">
+    <div class="container header-inner" style="max-width: 95%; padding: 0 1rem;">
+      <a class="brand" href="/" aria-label="The Networking Life — home">
+        <span class="brand-mark" aria-hidden="true">🔗</span>
+        <span class="brand-name">The Networking Life</span>
+      </a>
+      
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <ul role="list">
+          <li><a href="#opportunities" data-i18n="nav_opportunities">Opportunities</a></li>
+          <li><a href="#how" data-i18n="nav_how">How it works</a></li>
+        </ul>
+        
+        <div class="nav-actions">
+          <select id="lang-selector" class="lang-selector" aria-label="Select language">
+            <option value="en">🇺🇸 English</option>
+            <option value="es">🇪🇸 Español</option>
+            <option value="ko">🇰🇷 한국어</option>
+            <option value="zh">🇨🇳 中文</option>
+          </select>
+          <a class="btn btn--accent btn--sm" href="#opportunities" data-i18n="nav_explore">Explore</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO FULL SCREEN -->
     <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Building Connections <span class="accent-text">That Matter</span></h1>
-                <p class="hero-subtitle">Unlock opportunities through strategic professional relationships. Join a community of entrepreneurs, innovators, and leaders who are transforming careers through meaningful networking.</p>
-                <form class="signup-form" id="signupForm" action="https://formspree.io/f/mljeggze" method="POST">
-                    <input type="email" name="email" placeholder="Enter your email for early access" required>
-                    <button type="submit" class="btn-primary">Join Waitlist</button>
-                </form>
-                <p class="launch-status">🚀 Launching Soon — Limited spots available</p>
-                <div id="formStatus" style="display: none; margin-top: 10px; padding: 10px; border-radius: 4px;"></div>
-            </div>
-            <div class="hero-visual">
-                <div class="connection-graphic">
-                    <div class="node node-1"></div>
-                    <div class="node node-2"></div>
-                    <div class="node node-3"></div>
-                    <div class="node node-4"></div>
-                    <div class="connection-line line-1"></div>
-                    <div class="connection-line line-2"></div>
-                    <div class="connection-line line-3"></div>
-                </div>
-            </div>
+      <div class="hero-bg">
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2000" alt="Team meeting">
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="container hero-content">
+        <div>
+          <span class="hero-badge">
+            <span class="dot" aria-hidden="true"></span>
+            <span data-i18n="hero_badge">Curated Business Ventures</span>
+          </span>
+          <h1>
+            <span data-i18n="hero_title_1">Choose Your Path to</span> 
+            <span class="accent" data-i18n="hero_title_2">Financial Freedom</span>.
+          </h1>
+          <p class="hero-lead" data-i18n="hero_lead">
+            We connect visionary entrepreneurs with proven business models. 
+            Browse our catalog of opportunities, watch the training, and see if you qualify.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn--primary btn--lg" href="#opportunities" data-i18n="hero_cta">View Opportunities</a>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section class="stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-value">5,000+</div>
-                    <div class="stat-label">Professional Members</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value">50+</div>
-                    <div class="stat-label">Cities Worldwide</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value">92%</div>
-                    <div class="stat-label">Career Advancement</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value">10K+</div>
-                    <div class="stat-label">Connections Made</div>
-                </div>
-            </div>
+    <!-- STATS -->
+    <section class="section" style="padding-block: 3rem; background: var(--surface);">
+      <div class="container">
+        <div class="stats">
+          <div>
+            <p class="stat-value">5,000+</p>
+            <p class="stat-label" data-i18n="stat_1">Active Entrepreneurs</p>
+          </div>
+          <div>
+            <p class="stat-value">50+</p>
+            <p class="stat-label" data-i18n="stat_2">Countries Served</p>
+          </div>
+          <div>
+            <p class="stat-value">1</p>
+            <p class="stat-label" data-i18n="stat_3">Active Program</p>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section class="about" id="about">
-        <div class="container">
-            <div class="section-header">
-                <h2>Why The Networking Life?</h2>
-                <p>Networking isn't just about collecting contacts — it's about building genuine relationships that accelerate your career and business goals.</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">💼</div>
-                    <h3>Career Growth</h3>
-                    <p>Connect with industry leaders who can guide your professional development and open doors to new opportunities.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🤝</div>
-                    <h3>Genuine Relationships</h3>
-                    <p>Move beyond transactional networking. Build lasting connections based on mutual trust and shared goals.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🌍</div>
-                    <h3>Global Community</h3>
-                    <p>Access professionals across industries and geographies. Expand your reach beyond local boundaries.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📈</div>
-                    <h3>Business Opportunities</h3>
-                    <p>Discover partnerships, investments, and collaborations that emerge from strong professional networks.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3>Strategic Matching</h3>
-                    <p>AI-powered matching connects you with people who align with your goals and expertise.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎓</div>
-                    <h3>Continuous Learning</h3>
-                    <p>Access exclusive workshops, mentorship programs, and knowledge-sharing sessions from community experts.</p>
-                </div>
-            </div>
+    <!-- CATÁLOGO (CARRUSEL) -->
+    <section class="section section--alt" id="opportunities" style="overflow: hidden;">
+      <div class="container">
+        <div class="section-head" style="text-align: center; margin-inline: auto;">
+          <span class="eyebrow" data-i18n="cat_eyebrow">Business Models</span>
+          <h2 data-i18n="cat_title">Select a Program to Begin</h2>
+          <p data-i18n="cat_desc">Each program has its own interactive training and qualification process.</p>
         </div>
+      </div>
+
+      <div class="carousel-wrapper">
+        <button class="carousel-btn prev" id="btn-prev" aria-label="Previous">←</button>
+        <button class="carousel-btn next" id="btn-next" aria-label="Next">→</button>
+
+        <div class="carousel-track" id="carousel-track">
+          
+          <!-- TARJETA 1: E-COMMERCE -->
+          <article class="course-card is-locked">
+            <div class="course-image" style="opacity: 0.5;">
+              <span class="course-badge badge-soon" data-i18n="card_2_tag">Coming Q3</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+              </svg>
+            </div>
+            <div class="course-content">
+              <span class="course-category" data-i18n="card_2_cat">E-Commerce</span>
+              <h3 data-i18n="card_2_title">Dropshipping Mastery</h3>
+              <p data-i18n="card_2_desc">Learn how to set up automated stores and manage supply chains without holding inventory.</p>
+              <button class="btn btn--ghost" style="width: 100%;" disabled data-i18n="card_btn_soon">Coming Soon</button>
+            </div>
+          </article>
+
+          <!-- TARJETA 2: AMWAY (La central que queremos que resalte) -->
+          <article class="course-card is-centered">
+            <div class="course-image">
+              <span class="course-badge badge-active" data-i18n="card_1_tag">Active</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                <path d="M2 12h20"></path>
+              </svg>
+            </div>
+            <div class="course-content">
+              <span class="course-category" data-i18n="card_1_cat">Network Marketing</span>
+              <h3 data-i18n="card_1_title">Amway Global Business</h3>
+              <p data-i18n="card_1_desc">Build residual income by leveraging a proven global supply chain. Watch the training to see if you qualify for our partner team.</p>
+              <a href="../training/index.html" class="btn btn--primary" style="width: 100%;" data-i18n="card_1_btn">Start Training</a>
+            </div>
+          </article>
+
+          <!-- TARJETA 3: CONSULTORÍA -->
+          <article class="course-card is-locked">
+            <div class="course-image" style="opacity: 0.5;">
+              <span class="course-badge badge-soon" data-i18n="card_3_tag">Coming Q4</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <div class="course-content">
+              <span class="course-category" data-i18n="card_3_cat">High-Ticket</span>
+              <h3 data-i18n="card_3_title">Digital Consulting</h3>
+              <p data-i18n="card_3_desc">Learn how to sell premium services, retain high-value clients, and build authority in your niche.</p>
+              <button class="btn btn--ghost" style="width: 100%;" disabled data-i18n="card_btn_soon">Coming Soon</button>
+            </div>
+          </article>
+
+          <!-- ======================================================= -->
+          <!-- PLANTILLA PARA NUEVAS TARJETAS (COPIA Y PEGA AQUÍ)      -->
+          <!-- ======================================================= -->
+          <!-- 
+          <article class="course-card is-locked">
+            <div class="course-image" style="opacity: 0.5;">
+              <span class="course-badge badge-soon" data-i18n="card_4_tag">Coming Q1</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+              </svg>
+            </div>
+            <div class="course-content">
+              <span class="course-category" data-i18n="card_4_cat">Affiliate Marketing</span>
+              <h3 data-i18n="card_4_title">High-Ticket Affiliates</h3>
+              <p data-i18n="card_4_desc">Promote premium products and earn high-ticket commissions.</p>
+              <button class="btn btn--ghost" style="width: 100%;" disabled data-i18n="card_btn_soon">Coming Soon</button>
+            </div>
+          </article>
+          -->
+
+        </div>
+      </div>
     </section>
 
-    <section class="benefits" id="benefits">
-        <div class="container">
-            <h2>What You'll Gain</h2>
-            <div class="benefits-list">
-                <div class="benefit-item">
-                    <div class="benefit-check">✓</div>
-                    <div class="benefit-content">
-                        <h4>Curated Introductions</h4>
-                        <p>No more cold outreach. Get warm introductions to professionals who matter for your career.</p>
-                    </div>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-check">✓</div>
-                    <div class="benefit-content">
-                        <h4>Industry-Specific Communities</h4>
-                        <p>Join specialized groups focused on your field — from tech to finance to creative industries.</p>
-                    </div>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-check">✓</div>
-                    <div class="benefit-content">
-                        <h4>Event Access</h4>
-                        <p>Exclusive invitations to virtual and in-person networking events, conferences, and meetups.</p>
-                    </div>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-check">✓</div>
-                    <div class="benefit-content">
-                        <h4>Mentorship Programs</h4>
-                        <p>Connect with experienced mentors or become one yourself. Grow together.</p>
-                    </div>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-check">✓</div>
-                    <div class="benefit-content">
-                        <h4>Resource Library</h4>
-                        <p>Access guides, templates, and frameworks for effective networking and relationship building.</p>
-                    </div>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-check">✓</div>
-                    <div class="benefit-content">
-                        <h4>Privacy-First Design</h4>
-                        <p>Your data stays secure. We prioritize your privacy and give you full control.</p>
-                    </div>
-                </div>
-            </div>
+    <!-- CTA FINAL -->
+    <section class="section" style="background: var(--surface);">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2 data-i18n="cta_title">Not sure which path to take?</h2>
+          <p data-i18n="cta_desc">Leave your email and our team will help you choose the right business model for your goals.</p>
+          <form class="join-form" action="https://formspree.io/f/mljeggze" method="POST">
+            <input class="field" name="email" type="email" placeholder="your.email@example.com" required>
+            <button class="btn btn--accent btn--lg" type="submit" data-i18n="cta_btn">Get Guidance</button>
+          </form>
         </div>
+      </div>
     </section>
+  </main>
 
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Transform Your Network?</h2>
-                <p>Join thousands of professionals who are already leveraging the power of strategic connections.</p>
-                <form class="signup-form" id="finalSignupForm" action="https://formspree.io/f/mljeggze" method="POST">
-                    <input type="email" name="email" placeholder="your.email@example.com" required>
-                    <button type="submit" class="btn-primary btn-large">Get Early Access</button>
-                </form>
-                <p class="note">No spam. Unsubscribe anytime.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="logo">
-                        <span class="logo-icon">🔗</span>
-                        <span class="logo-text">The Networking Life</span>
-                    </div>
-                    <p>Building meaningful professional connections in the digital age.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#benefits">Benefits</a></li>
-                        <li><a href="#community">Community</a></li>
-                    </ul>
-                </div>
-                <div class="footer-social">
-                    <h4>Connect With Us</h4>
-                    <div class="social-links">
-                        <a href="https://facebook.com/TheNetworkingLifeofficial" target="_blank" aria-label="Facebook">📘</a>
-                        <a href="https://instagram.com/thenetworkinglifeofficial" target="_blank" aria-label="Instagram">📸</a>
-                        <a href="#" target="_blank" aria-label="TikTok">🎵</a>
-                        <a href="https://youtube.com/@TheNetworkingLife" target="_blank" aria-label="YouTube">▶️</a>
-                        <a href="#" target="_blank" aria-label="X">𝕏</a>
-                        <a href="https://www.linkedin.com/in/thenetworkinglife/" target="_blank" aria-label="LinkedIn">💼</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 The Networking Life. All rights reserved.</p>
-                <div class="footer-legal">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        const mobileToggle = document.getElementById('mobileToggle');
-        const navMenu = document.getElementById('navMenu');
-        mobileToggle.addEventListener('click', () => { navMenu.classList.toggle('active'); });
-        
-        // Formspree integration
-        const forms = document.querySelectorAll('#signupForm, #finalSignupForm');
-        const formStatus = document.getElementById('formStatus');
-        
-        forms.forEach(form => {
-            form.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                
-                const formData = new FormData(form);
-                const email = formData.get('email');
-                const submitBtn = form.querySelector('button[type="submit"]');
-                const originalBtnText = submitBtn.textContent;
-                
-                // Show loading state
-                submitBtn.disabled = true;
-                submitBtn.textContent = 'Submitting...';
-                
-                try {
-                    const response = await fetch(form.action, {
-                        method: 'POST',
-                        body: formData,
-                        headers: { 'Accept': 'application/json' }
-                    });
-                    
-                    if (response.ok) {
-                        formStatus.style.display = 'block';
-                        formStatus.style.background = '#d4edda';
-                        formStatus.style.color = '#155724';
-                        formStatus.innerHTML = '✅ Thank you! ' + email + ' has been added to our waitlist.';
-                        form.reset();
-                        
-                        setTimeout(() => { formStatus.style.display = 'none'; }, 5000);
-                    } else {
-                        throw new Error('Submission failed');
-                    }
-                } catch (error) {
-                    formStatus.style.display = 'block';
-                    formStatus.style.background = '#f8d7da';
-                    formStatus.style.color = '#721c24';
-                    formStatus.innerHTML = '❌ Oops! Something went wrong. Please try again.';
-                } finally {
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = originalBtnText;
-                }
-            });
-        });
-        
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if(target) { target.scrollIntoView({ behavior: 'smooth' }); }
-            });
-        });
-    </script>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="justify-content: center;">
+        <p>© <span data-year>2026</span> The Networking Life. <span data-i18n="footer_rights">All rights reserved.</span></p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

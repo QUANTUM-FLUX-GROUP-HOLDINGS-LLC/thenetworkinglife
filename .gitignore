@@ -24,3 +24,17 @@ build/
 .env
 .env.local
 .env.*.local
+
+# Backups locales (fuera del repo)
+_backup/
+*.backup
+*.bak
+
+# Zips de deploy
+*.zip
+!tln-deploy.zip
+!tnl-upload.zip
+
+# Node (para cuando añadamos PostCSS)
+node_modules/
+.DS_Store
