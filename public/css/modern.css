@@ -1366,3 +1366,19 @@ section:has(.cta-band) {
     font-size: 1.25rem;
   }
 }
+
+/* ==========================================
+   FIX: MOVER BOTÓN SCROLL A LA IZQUIERDA (Evitar choque con Chatbot)
+   ========================================== */
+.scroll-top-btn {
+  right: auto !important; /* Quitamos la posición de la derecha */
+  left: 2rem !important;  /* Lo mandamos a la izquierda */
+}
+
+@media (max-width: 48rem) {
+  .scroll-top-btn {
+    right: auto !important;
+    left: 1.5rem !important;
+    bottom: 2rem !important; /* En móviles lo bajamos un poco */
+  }
+}
