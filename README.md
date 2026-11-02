@@ -5,27 +5,27 @@ Professional networking brand, community platform, and interactive sales funnel 
 ## Overview
 
 This repository contains the complete web ecosystem for **The Networking Life**, built with a modern, modular architecture:
+
 1. **Business Opportunities Hub (Landing Page):** A multi-language catalog featuring current and upcoming business models (like Amway Global Business).
 2. **Interactive Training Funnel:** A 3-step qualification funnel featuring video presentations, interactive questionnaires, and direct conversion paths.
 3. **AI Assistant:** An integrated chatbot (via ChatbotLite and Cloudflare Workers) powered by Groq/Llama 3, trained on custom business knowledge.
 
 ## ⚠️ Modular Architecture & Build Process
 
-**Do not edit files inside the `public/` folder directly.** They are automatically generated. 
+**Do not edit files inside the `public/` folder directly.** They are automatically generated.
 
 All source files are located in the `src/` directory. We use a custom Python build script to stitch the components together into the final static files.
 
 ### How to make changes:
+
 1. Edit the HTML partials inside `src/public/partials/` (Landing Page) or `src/training/partials/` (Training Funnel).
 2. Edit the base templates `src/public/template.html` or `src/training/template.html`.
 3. Run the build script in your terminal:
-   ```bash
-   python3 build.py
+
+```bash
+python3 build.py
 
 4. The script will generate the final public/index.html and public/training/index.html.
-
-Project Structure
-text
 
 .
 ├── build.py                # Python script to compile HTML components
@@ -46,7 +46,7 @@ text
     ├── js/
     └── training/           # Generated Training Funnel
         ├── index.html
-        └── assets/media/   # ⚠️ PLACE YOUR VIDEO FILES HERE
+        └── assets/media/   # PLACE YOUR VIDEO FILES HERE
 
 AI Chatbot Integration
 
@@ -61,7 +61,6 @@ The chatbot uses a separate Cloudflare Worker (tnl-chatbot-api).
 Required Video Files
 
 For the training funnel to work properly, place your .mp4 files in the public/training/assets/media/ directory with the following exact names:
-text
 
 intro-es.mp4  |  final-es.mp4
 intro-en.mp4  |  final-en.mp4
@@ -82,8 +81,7 @@ Tech Stack
 
 Deployment
 
-To deploy changes to production:
-bash
+To deploy changes to production, run the build script, push to GitHub, and deploy via Wrangler:
 
 python3 build.py
 git add .
