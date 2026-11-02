@@ -41,3 +41,10 @@ if __name__ == '__main__':
     print('\n--- Construyendo Página Consulting ---')
     build_project('src/consulting', 'public/consulting/index.html')
 
+    print('\n--- Copiando Páginas Legales ---')
+    import shutil, os
+    os.makedirs('public/legal', exist_ok=True)
+    shutil.copy('src/legal/privacy.html', 'public/legal/privacy.html')
+    shutil.copy('src/legal/terms.html', 'public/legal/terms.html')
+    print('✅ Generado: public/legal/privacy.html y terms.html')
+
