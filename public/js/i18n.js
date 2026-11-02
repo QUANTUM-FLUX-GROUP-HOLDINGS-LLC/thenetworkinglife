@@ -36,6 +36,9 @@ const translations = {
     cta_title: "Not sure which path to take?",
     cta_desc: "Leave your email and our team will help you choose the right business model for your goals.",
     cta_btn: "Get Guidance",
+    footer_desc: "Building meaningful professional connections in the digital age.",
+    footer_links: "Quick Links",
+    footer_social: "Connect With Us",
     footer_rights: "All rights reserved."
   },
   es: {
@@ -72,6 +75,9 @@ const translations = {
     cta_title: "¿No sabes qué camino tomar?",
     cta_desc: "Déjanos tu correo y nuestro equipo te ayudará a elegir el modelo de negocio adecuado.",
     cta_btn: "Obtener Asesoría",
+    footer_desc: "Construyendo conexiones profesionales significativas en la era digital.",
+    footer_links: "Enlaces Rápidos",
+    footer_social: "Conéctate con Nosotros",
     footer_rights: "Todos los derechos reservados."
   },
   ko: {
@@ -108,6 +114,9 @@ const translations = {
     cta_title: "어떤 길을 선택해야 할지 모르시겠나요?",
     cta_desc: "이메일을 남겨주시면 저희 팀이 목표에 맞는 비즈니스 모델을 선택하도록 도와드리겠습니다.",
     cta_btn: "가이드 받기",
+    footer_desc: "디지털 시대에 의미 있는 전문적인 연결을 구축합니다.",
+    footer_links: "빠른 링크",
+    footer_social: "우리와 연결하세요",
     footer_rights: "모든 권리 보유."
   },
   zh: {
@@ -144,6 +153,9 @@ const translations = {
     cta_title: "不确定该走哪条路？",
     cta_desc: "留下您的电子邮件，我们的团队将帮助您选择适合您目标的商业模式。",
     cta_btn: "获取指导",
+    footer_desc: "在数字时代建立有意义的专业联系。",
+    footer_links: "快速链接",
+    footer_social: "联系我们",
     footer_rights: "保留所有权利。"
   }
 };
