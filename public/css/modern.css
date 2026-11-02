@@ -1054,3 +1054,33 @@
   height: 1.25rem;
   fill: currentColor;
 }
+
+/* ==========================================
+   FIX: COLOR DE LOS ICONOS DEL FOOTER
+   ========================================== */
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--brand-900) !important; /* Color oscuro para que se vea bien */
+  transition: all 0.2s ease;
+}
+
+.social-links a:hover {
+  background: var(--gold-600);
+  border-color: var(--gold-600);
+  color: var(--brand-950) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-1);
+}
+
+.social-links a svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: currentColor; /* Hereda el color oscuro */
+}

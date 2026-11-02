@@ -1,6 +1,5 @@
-name = "thenetworkinglife"
+name = "withered-sun-6a60"
 compatibility_date = "2024-03-20"
 
-# Le dice a Cloudflare que sirva los archivos de la carpeta "public"
 [assets]
 directory = "./public"
