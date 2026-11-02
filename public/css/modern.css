@@ -1239,3 +1239,64 @@
 @media (max-width: 48rem) {
   .scroll-top-btn { bottom: 5.5rem; right: 1.5rem; width: 3rem; height: 3rem; font-size: 1.25rem; }
 }
+
+/* ==========================================
+   DISEÑO MODERNO PARA LAS TARJETAS DEL PROCESO
+   ========================================== */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+  margin-top: var(--space-7);
+}
+
+.step-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-1);
+  transition: all var(--dur) var(--ease-out);
+}
+
+/* Un borde superior degradado para darle un toque premium */
+.step-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--brand-500), var(--gold-600));
+  opacity: 0.8;
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-3);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.step-number {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--brand-200);
+  margin-bottom: var(--space-3);
+  -webkit-text-stroke: 1px var(--brand-500); /* Le da un toque de contorno */
+}
+
+.step-card h3 {
+  font-size: var(--step-2);
+  margin-bottom: var(--space-2);
+  color: var(--brand-900);
+}
+
+.step-card p {
+  color: var(--ink-500);
+  font-size: var(--step-0);
+  line-height: 1.6;
+}
