@@ -118,3 +118,29 @@
   if (year) year.textContent = new Date().getFullYear();
 
 })();
+
+/* ==========================================
+   LÓGICA DEL BOTÓN SCROLL TO TOP
+   ========================================== */
+document.addEventListener('DOMContentLoaded', () => {
+  const scrollTopBtn = document.getElementById('scroll-top-btn');
+  
+  if (scrollTopBtn) {
+    // Mostrar/ocultar el botón al hacer scroll
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scrollTopBtn.classList.add('is-visible');
+      } else {
+        scrollTopBtn.classList.remove('is-visible');
+      }
+    }, { passive: true });
+
+    // Hacer scroll hacia arriba suavemente
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+});

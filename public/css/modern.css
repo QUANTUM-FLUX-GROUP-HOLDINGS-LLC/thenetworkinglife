@@ -1129,3 +1129,50 @@
   background: #000000;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
+
+/* ==========================================
+   BOTÓN SCROLL TO TOP
+   ========================================== */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: var(--gold-600);
+  color: var(--brand-950);
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: var(--shadow-2);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.scroll-top-btn.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-top-btn:hover {
+  background: var(--gold-400);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-3);
+}
+
+/* En móvil, lo subimos un poco para que no choque con nada */
+@media (max-width: 48rem) {
+  .scroll-top-btn {
+    bottom: 5.5rem; /* Espacio por si hay botones flotantes */
+    right: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.25rem;
+  }
+}
