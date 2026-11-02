@@ -1300,3 +1300,23 @@
   font-size: var(--step-0);
   line-height: 1.6;
 }
+
+/* ==========================================
+   FIX: REDUCIR ESPACIOS VACÍOS ENTRE SECCIONES
+   ========================================== */
+
+/* Reducir el espacio debajo de las tarjetas de "El Proceso" */
+#how {
+  padding-bottom: 2rem !important;
+}
+
+/* Reducir el espacio arriba y abajo de la sección del Formulario (CTA) */
+section:has(.cta-band) {
+  padding-top: 2rem !important;
+  padding-bottom: 4rem !important;
+}
+
+/* Hacer que el formulario (CTA) se vea más estilizado */
+.cta-band {
+  margin-top: 0 !important;
+}
