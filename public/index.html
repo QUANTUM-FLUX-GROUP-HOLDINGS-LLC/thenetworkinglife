@@ -18,7 +18,6 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- HEADER FLOTANTE -->
   <header class="site-header">
     <div class="container header-inner" style="max-width: 95%; padding: 0 1rem;">
       <a class="brand" href="/" aria-label="The Networking Life — home">
@@ -47,7 +46,6 @@
   </header>
 
   <main id="main">
-    <!-- HERO -->
     <section class="hero">
       <div class="hero-bg">
         <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2000" alt="Team meeting">
@@ -73,8 +71,6 @@
         </div>
       </div>
     </section>
-
-    <!-- STATS -->
     <section class="section" style="padding-block: 3rem; background: var(--surface);">
       <div class="container">
         <div class="stats">
@@ -93,68 +89,7 @@
         </div>
       </div>
     </section>
-
-    <!-- CATÁLOGO (CARRUSEL) -->
-    <section class="section section--alt" id="opportunities" style="overflow: hidden;">
-      <div class="container">
-        <div class="section-head" style="text-align: center; margin-inline: auto;">
-          <span class="eyebrow" data-i18n="cat_eyebrow">Business Models</span>
-          <h2 data-i18n="cat_title">Select a Program to Begin</h2>
-          <p data-i18n="cat_desc">Each program has its own interactive training and qualification process.</p>
-        </div>
-      </div>
-
-      <div class="carousel-wrapper">
-        <button class="carousel-btn prev" id="btn-prev" aria-label="Previous">←</button>
-        <button class="carousel-btn next" id="btn-next" aria-label="Next">→</button>
-
-        <div class="carousel-track" id="carousel-track">
-          <!-- TARJETA 1 -->
-          <article class="course-card is-locked">
-            <div class="course-image" style="opacity: 0.5;">
-              <span class="course-badge badge-soon" data-i18n="card_2_tag">Coming Q3</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-            </div>
-            <div class="course-content">
-              <span class="course-category" data-i18n="card_2_cat">E-Commerce</span>
-              <h3 data-i18n="card_2_title">Dropshipping Mastery</h3>
-              <p data-i18n="card_2_desc">Learn how to set up automated stores and manage supply chains without holding inventory.</p>
-              <button class="btn btn--ghost" style="width: 100%;" disabled data-i18n="card_btn_soon">Coming Soon</button>
-            </div>
-          </article>
-
-          <!-- TARJETA 2 (CENTRAL) -->
-          <article class="course-card is-centered">
-            <div class="course-image">
-              <span class="course-badge badge-active" data-i18n="card_1_tag">Active</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path><path d="M2 12h20"></path></svg>
-            </div>
-            <div class="course-content">
-              <span class="course-category" data-i18n="card_1_cat">Network Marketing</span>
-              <h3 data-i18n="card_1_title">Amway Global Business</h3>
-              <p data-i18n="card_1_desc">Build residual income by leveraging a proven global supply chain. Watch the training to see if you qualify for our partner team.</p>
-              <a href="training/index.html" class="btn btn--primary" style="width: 100%;" data-i18n="card_1_btn">Start Training</a>
-            </div>
-          </article>
-
-          <!-- TARJETA 3 -->
-          <article class="course-card is-locked">
-            <div class="course-image" style="opacity: 0.5;">
-              <span class="course-badge badge-soon" data-i18n="card_3_tag">Coming Q4</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-            </div>
-            <div class="course-content">
-              <span class="course-category" data-i18n="card_3_cat">High-Ticket</span>
-              <h3 data-i18n="card_3_title">Digital Consulting</h3>
-              <p data-i18n="card_3_desc">Learn how to sell premium services, retain high-value clients, and build authority in your niche.</p>
-              <button class="btn btn--ghost" style="width: 100%;" disabled data-i18n="card_btn_soon">Coming Soon</button>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- NUEVA SECCIÓN: CÓMO FUNCIONA -->
+    {{OPPORTUNITIES}}
     <section class="section" id="how">
       <div class="container">
         <div class="section-head" style="text-align: center; margin-inline: auto;">
@@ -180,8 +115,6 @@
         </div>
       </div>
     </section>
-
-    <!-- CTA FINAL -->
     <section class="section" style="background: var(--surface);">
       <div class="container">
         <div class="cta-band">
