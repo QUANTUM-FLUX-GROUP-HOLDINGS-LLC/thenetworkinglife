@@ -228,5 +228,18 @@
     </div>
   </footer>
   <button id="scroll-top-btn" class="scroll-top-btn" aria-label="Scroll to top">↑</button>
+
+  <!-- Chatbot AI -->
+  <script src="https://unpkg.com/chatbotlite/dist/embed.global.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      chatbotlite.mount({
+        endpoint: "https://tnl-chatbot-api.maximumflashpower.workers.dev",
+        title: "Asistente TNL",
+        primaryColor: "#1e3a5f"
+      });
+    });
+  </script>
 </body>
+
 </html>
