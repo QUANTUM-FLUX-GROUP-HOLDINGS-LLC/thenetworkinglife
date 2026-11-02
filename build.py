@@ -38,3 +38,6 @@ if __name__ == '__main__':
     print('\n--- Construyendo Página E-commerce ---')
     build_project('src/ecommerce', 'public/ecommerce/index.html')
 
+    print('\n--- Construyendo Página Consulting ---')
+    build_project('src/consulting', 'public/consulting/index.html')
+
