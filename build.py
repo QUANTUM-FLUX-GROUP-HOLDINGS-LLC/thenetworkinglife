@@ -34,3 +34,7 @@ if __name__ == '__main__':
     
     print('\n--- Construyendo Embudo de Training ---')
     build_project('src/training', 'public/training/index.html')
+
+    print('\n--- Construyendo Página E-commerce ---')
+    build_project('src/ecommerce', 'public/ecommerce/index.html')
+
