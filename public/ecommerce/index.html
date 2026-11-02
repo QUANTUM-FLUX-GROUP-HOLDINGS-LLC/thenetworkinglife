@@ -7,41 +7,83 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/modern.css">
-</head>
-<body style="background: var(--surface-2);">
-  
-  <!-- Barra Superior: Volver y Selector de Idioma -->
-  <div style="position: fixed; top: 1.5rem; left: 1.5rem; right: 1.5rem; display: flex; justify-content: space-between; align-items: center; z-index: 1000;">
-    <a href="../index.html" style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.6rem 1.2rem; background:rgba(255,255,255,0.8); border:1px solid var(--border); border-radius:999px; color:var(--ink-900); text-decoration:none; font-weight:500; font-size:0.9rem; box-shadow:var(--shadow-1); backdrop-filter:blur(10px);">← <span data-i18n="btn_back">Volver al Hub</span></a>
+  <style>
+    /* Estilos específicos del Slider */
+    .hero-slider {
+      position: relative; height: 100vh; min-height: 600px;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center; overflow: hidden; background: var(--brand-950);
+    }
+    .hero-slide {
+      position: absolute; inset: 0; background-size: cover; background-position: center;
+      opacity: 0; transition: opacity 1.5s ease-in-out; z-index: 1;
+    }
+    .hero-slide.active { opacity: 1; }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(10,20,40,0.6), rgba(10,20,40,0.9));
+      z-index: 2;
+    }
+    .hero-content { position: relative; z-index: 3; color: #fff; max-width: 800px; padding: 2rem; }
+    .hero-content h1 { color: #fff; font-size: clamp(2.5rem, 5vw, 4rem); }
+    .hero-content p { color: rgba(255,255,255,0.85); font-size: var(--step-1); margin-top: 1rem; }
+    .hero-content .field { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: #fff; }
+    .hero-content .field::placeholder { color: rgba(255,255,255,0.6); }
     
-    <select id="lang-selector" class="lang-selector" style="appearance: auto; padding: 0.5rem; border-radius: 999px; background: rgba(255,255,255,0.8); border: 1px solid var(--border); font-weight: 500; cursor: pointer;">
-      <option value="es">🇪🇸 Español</option>
-      <option value="en">🇺🇸 English</option>
-    </select>
-  </div>
+    /* Botón de volver adaptado a fondo oscuro */
+    .back-btn-dark {
+      position: fixed; top: 1.5rem; left: 1.5rem; z-index: 1000;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.6rem 1.2rem; background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2); border-radius: 999px;
+      color: #fff; text-decoration: none; font-weight: 500; font-size: 0.9rem;
+      backdrop-filter: blur(10px); transition: all 0.2s ease;
+    }
+    .back-btn-dark:hover { background: rgba(255,255,255,0.2); }
+    
+    .lang-select-dark {
+      position: fixed; top: 1.5rem; right: 1.5rem; z-index: 1000;
+      appearance: auto; padding: 0.5rem; border-radius: 999px;
+      background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+      color: #fff; font-weight: 500; cursor: pointer; backdrop-filter: blur(10px);
+    }
+    .lang-select-dark option { color: #000; }
+  </style>
+</head>
+<body>
+  
+  <!-- Barra Superior -->
+  <a href="../index.html" class="back-btn-dark">← <span data-i18n="btn_back">Volver al Hub</span></a>
+  <select id="lang-selector" class="lang-select-dark">
+    <option value="es">🇪🇸 Español</option>
+    <option value="en">🇺🇸 English</option>
+  </select>
 
-  <!-- HERO -->
-  <section class="hero" style="padding-top: 8rem; padding-bottom: 4rem;">
-    <div class="container" style="text-align: center; max-width: 800px;">
-      <span class="hero-badge" style="margin-bottom: 1.5rem;">
-        <span class="dot" style="background: var(--gold-600);"></span> <span data-i18n="badge">Próximamente Q3 2026</span>
+  <!-- HERO SLIDER -->
+  <section class="hero-slider">
+    <!-- Imágenes de fondo (Puedes cambiarlas por tus propias rutas locales o URLs) -->
+    <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2000&auto=format&fit=crop');"></div>
+    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1661956602116-aa6865609028?q=80&w=2000&auto=format&fit=crop');"></div>
+    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2000&auto=format&fit=crop');"></div>
+    
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <span class="hero-badge" style="margin-bottom: 1.5rem; background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.3);">
+        <span class="dot" style="background: var(--gold-400);"></span> <span data-i18n="badge">Próximamente Q3 2026</span>
       </span>
-      <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); color: var(--brand-900);" data-i18n="hero_title">
-        Domina el <span style="color: var(--gold-600);">Dropshipping</span>.
-      </h1>
-      <p class="hero-lead" style="margin-top: 1.5rem; margin-inline: auto; color: var(--ink-500);" data-i18n="hero_desc">
-        Aprende a crear tiendas automatizadas, encontrar proveedores de élite y escalar tus ventas sin necesidad de mantener inventario físico.
-      </p>
+      <h1 data-i18n="hero_title">Domina el <span style="color: var(--gold-400);">Dropshipping</span>.</h1>
+      <p data-i18n="hero_desc">Aprende a crear tiendas automatizadas, encontrar proveedores de élite y escalar tus ventas sin inventario físico.</p>
       
       <form class="join-form" action="https://formspree.io/f/mljeggze" method="POST" style="justify-content: center; margin-top: 2rem;">
         <input class="field" name="email" type="email" placeholder="Tu mejor correo electrónico" required style="max-width: 320px;" data-i18n-placeholder="placeholder">
-        <button class="btn btn--primary btn--lg" type="submit" data-i18n="btn_waitlist">Unirme a la lista de espera</button>
+        <button class="btn btn--accent btn--lg" type="submit" data-i18n="btn_waitlist">Unirme a la lista de espera</button>
       </form>
     </div>
   </section>
 
   <!-- QUÉ VAS A APRENDER -->
-  <section class="section" style="padding-block: 4rem;">
+  <section class="section" style="padding-block: 5rem; background: var(--surface-2);">
     <div class="container">
       <div class="section-head" style="text-align: center; margin-inline: auto;">
         <span class="eyebrow" data-i18n="curriculum_eyebrow">Temario del Programa</span>
@@ -73,21 +115,30 @@
   </section>
 
   <!-- CTA FINAL -->
-  <section class="section" style="padding-bottom: 6rem;">
+  <section class="section" style="padding-block: 5rem; background: var(--surface);">
     <div class="container">
       <div class="cta-band" style="text-align: center;">
         <h2 data-i18n="cta_title">¿Estás listo para dejar de vender tu tiempo por dinero?</h2>
         <p data-i18n="cta_desc">Únete a la lista de espera y recibe un descuento exclusivo de lanzamiento.</p>
-        <button class="btn btn--accent btn--lg" style="margin-top: 1.5rem;" onclick="document.querySelector('.field').focus();" data-i18n="cta_btn">Asegurar mi lugar</button>
+        <button class="btn btn--accent btn--lg" style="margin-top: 1.5rem;" onclick="window.scrollTo({top:0, behavior:'smooth'}); setTimeout(()=>document.querySelector('.field').focus(), 500);" data-i18n="cta_btn">Asegurar mi lugar</button>
       </div>
     </div>
   </section>
 
-  <!-- SCRIPT DE TRADUCCIÓN LOCAL -->
   <script>
+    // Lógica del Slider
+    const slides = document.querySelectorAll('.hero-slide');
+    let currentSlide = 0;
+    setInterval(() => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }, 4000);
+
+    // Lógica de Traducción
     const trans = {
-      es: { btn_back: "Volver al Hub", badge: "Próximamente Q3 2026", hero_title: 'Domina el <span style="color: var(--gold-600);">Dropshipping</span>.', hero_desc: "Aprende a crear tiendas automatizadas, encontrar proveedores de élite y escalar tus ventas sin necesidad de mantener inventario físico.", placeholder: "Tu mejor correo electrónico", btn_waitlist: "Unirme a la lista de espera", curriculum_eyebrow: "Temario del Programa", curriculum_title: "Lo que construiremos juntos", card1_title: "Creación de Tienda", card1_desc: "Configuración de Shopify desde cero, personalización de tema y pasarelas de pago.", card2_title: "Proveedores", card2_desc: "Cómo encontrar productos ganadores en AliExpress y CJ Dropshipping.", card3_title: "Tráfico y Ads", card3_desc: "Campañas rentables en Meta Ads y TikTok Ads paso a paso.", card4_title: "Automatización", card4_desc: "Conecta herramientas para que los pedidos se procesen solos.", cta_title: "¿Estás listo para dejar de vender tu tiempo por dinero?", cta_desc: "Únete a la lista de espera y recibe un descuento exclusivo de lanzamiento.", cta_btn: "Asegurar mi lugar" },
-      en: { btn_back: "Back to Hub", badge: "Coming Q3 2026", hero_title: 'Master <span style="color: var(--gold-600);">Dropshipping</span>.', hero_desc: "Learn how to create automated stores, find elite suppliers, and scale your sales without holding physical inventory.", placeholder: "Your best email", btn_waitlist: "Join the waitlist", curriculum_eyebrow: "Program Curriculum", curriculum_title: "What we will build together", card1_title: "Store Creation", card1_desc: "Shopify setup from scratch, theme customization, and payment gateways.", card2_title: "Suppliers", card2_desc: "How to find winning products on AliExpress and CJ Dropshipping.", card3_title: "Traffic & Ads", card3_desc: "Profitable campaigns on Meta Ads and TikTok Ads step by step.", card4_title: "Automation", card4_desc: "Connect tools so orders process themselves.", cta_title: "Ready to stop trading time for money?", cta_desc: "Join the waitlist and get an exclusive launch discount.", cta_btn: "Secure my spot" }
+      es: { btn_back: "Volver al Hub", badge: "Próximamente Q3 2026", hero_title: 'Domina el <span style="color: var(--gold-400);">Dropshipping</span>.', hero_desc: "Aprende a crear tiendas automatizadas, encontrar proveedores de élite y escalar tus ventas sin necesidad de mantener inventario físico.", placeholder: "Tu mejor correo electrónico", btn_waitlist: "Unirme a la lista de espera", curriculum_eyebrow: "Temario del Programa", curriculum_title: "Lo que construiremos juntos", card1_title: "Creación de Tienda", card1_desc: "Configuración de Shopify desde cero, personalización de tema y pasarelas de pago.", card2_title: "Proveedores", card2_desc: "Cómo encontrar productos ganadores en AliExpress y CJ Dropshipping.", card3_title: "Tráfico y Ads", card3_desc: "Campañas rentables en Meta Ads y TikTok Ads paso a paso.", card4_title: "Automatización", card4_desc: "Conecta herramientas para que los pedidos se procesen solos.", cta_title: "¿Estás listo para dejar de vender tu tiempo por dinero?", cta_desc: "Únete a la lista de espera y recibe un descuento exclusivo de lanzamiento.", cta_btn: "Asegurar mi lugar" },
+      en: { btn_back: "Back to Hub", badge: "Coming Q3 2026", hero_title: 'Master <span style="color: var(--gold-400);">Dropshipping</span>.', hero_desc: "Learn how to create automated stores, find elite suppliers, and scale your sales without holding physical inventory.", placeholder: "Your best email", btn_waitlist: "Join the waitlist", curriculum_eyebrow: "Program Curriculum", curriculum_title: "What we will build together", card1_title: "Store Creation", card1_desc: "Shopify setup from scratch, theme customization, and payment gateways.", card2_title: "Suppliers", card2_desc: "How to find winning products on AliExpress and CJ Dropshipping.", card3_title: "Traffic & Ads", card3_desc: "Profitable campaigns on Meta Ads and TikTok Ads step by step.", card4_title: "Automation", card4_desc: "Connect tools so orders process themselves.", cta_title: "Ready to stop trading time for money?", cta_desc: "Join the waitlist and get an exclusive launch discount.", cta_btn: "Secure my spot" }
     };
     document.getElementById('lang-selector').addEventListener('change', (e) => {
       const lang = e.target.value;
