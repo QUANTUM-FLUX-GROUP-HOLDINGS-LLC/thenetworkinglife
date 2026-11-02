@@ -1084,3 +1084,48 @@
   height: 1.25rem;
   fill: currentColor; /* Hereda el color oscuro */
 }
+
+/* ==========================================
+   COLORES DE MARCA EN HOVER PARA REDES SOCIALES
+   ========================================== */
+.social-links a:hover {
+  transform: translateY(-3px) scale(1.05);
+  color: #fff !important; /* El ícono se vuelve blanco al tener fondo de color */
+  border-color: transparent !important;
+}
+
+/* Facebook */
+.social-links a[aria-label="Facebook"]:hover {
+  background: #1877f2;
+  box-shadow: 0 4px 15px rgba(24, 119, 242, 0.4);
+}
+
+/* Instagram */
+.social-links a[aria-label="Instagram"]:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  box-shadow: 0 4px 15px rgba(214, 36, 159, 0.4);
+}
+
+/* YouTube */
+.social-links a[aria-label="YouTube"]:hover {
+  background: #ff0000;
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
+}
+
+/* LinkedIn */
+.social-links a[aria-label="LinkedIn"]:hover {
+  background: #0a66c2;
+  box-shadow: 0 4px 15px rgba(10, 102, 194, 0.4);
+}
+
+/* TikTok */
+.social-links a[aria-label="TikTok"]:hover {
+  background: linear-gradient(135deg, #25f4ee, #fe2c55);
+  box-shadow: 0 4px 15px rgba(254, 44, 85, 0.4);
+}
+
+/* X (Twitter) */
+.social-links a[aria-label="X"]:hover {
+  background: #000000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
