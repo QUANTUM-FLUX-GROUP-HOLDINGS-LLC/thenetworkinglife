@@ -1,45 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Networking Life | Digital Consulting</title>
-  <meta name="description" content="Learn how to sell premium services and build authority in your niche. Coming Q4 2026.">
+  <title>Digital Consulting | The Networking Life</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/modern.css">
 </head>
-<body>
-  <a href="../index.html" class="back-btn" aria-label="Volver a la página principal" style="position:fixed; top:1.5rem; left:1.5rem; z-index:1000; display:inline-flex; align-items:center; gap:0.5rem; padding:0.6rem 1.2rem; background:rgba(255,255,255,0.8); border:1px solid var(--border); border-radius:999px; color:var(--ink-900); text-decoration:none; font-weight:500; font-size:0.9rem; box-shadow:var(--shadow-1); backdrop-filter:blur(10px);">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1.2rem;height:1.2rem;"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-    Volver
+<body style="background: var(--surface-2);">
+  
+  <a href="../index.html" class="back-btn" style="position:fixed; top:1.5rem; left:1.5rem; z-index:1000; display:inline-flex; align-items:center; gap:0.5rem; padding:0.6rem 1.2rem; background:rgba(255,255,255,0.8); border:1px solid var(--border); border-radius:999px; color:var(--ink-900); text-decoration:none; font-weight:500; font-size:0.9rem; box-shadow:var(--shadow-1); backdrop-filter:blur(10px);">
+    ← Volver al Hub
   </a>
 
-  <main id="main" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background: var(--surface-2); padding: 2rem;">
-    <div class="container" style="max-width: 800px; text-align: center;">
-      <span class="hero-badge" style="margin-bottom: 2rem; display: inline-flex;">
-        <span class="dot" aria-hidden="true" style="background: var(--brand-500);"></span>
-        Próximamente Q4 2026
+  <!-- HERO -->
+  <section class="hero" style="padding-top: 8rem; padding-bottom: 4rem;">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <span class="hero-badge" style="margin-bottom: 1.5rem;">
+        <span class="dot" style="background: var(--brand-500);"></span> Próximamente Q4 2026
       </span>
-      <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); color: var(--brand-900); margin-bottom: 1.5rem;">
-        Consultoría <span style="color: var(--brand-500);">Digital</span>
+      <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); color: var(--brand-900);">
+        Consultoría <span style="color: var(--brand-500);">Digital de Alto Valor</span>.
       </h1>
-      <p style="font-size: var(--step-1); color: var(--ink-500); margin-bottom: 3rem; max-width: 600px; margin-inline: auto;">
-        Aprende a vender servicios premium, retener clientes de alto valor y construir autoridad en tu nicho. Déjanos tu correo para avisarte en cuanto abramos las inscripciones.
+      <p class="hero-lead" style="margin-top: 1.5rem; margin-inline: auto; color: var(--ink-500);">
+        Deja de competir por centavos. Aprende a empaquetar tu conocimiento, vender servicios premium y construir una autoridad magnética en tu nicho.
       </p>
-
-      <form class="join-form" action="https://formspree.io/f/mljeggze" method="POST" style="justify-content: center;">
-        <label class="sr-only" for="email">Email address</label>
-        <input class="field" id="email" name="email" type="email" placeholder="tu@email.com" required style="max-width: 300px; background: var(--surface); border-color: var(--border); color: var(--ink-900);">
-        <button class="btn btn--primary btn--lg" type="submit">Notificarme</button>
-      </form>
       
-      <div style="margin-top: 3rem;">
-        <p style="color: var(--ink-500); font-size: var(--step--1);">Mientras tanto, puedes explorar nuestra oportunidad activa:</p>
-        <a href="../training/index.html" class="btn btn--accent" style="margin-top: 1rem;">Ver entrenamiento de Amway</a>
+      <!-- FORMULARIO DE ESPERA -->
+      <form class="join-form" action="https://formspree.io/f/mljeggze" method="POST" style="justify-content: center; margin-top: 2rem;">
+        <input class="field" name="email" type="email" placeholder="Tu mejor correo electrónico" required style="max-width: 320px;">
+        <button class="btn btn--primary btn--lg" type="submit">Unirme a la lista de espera</button>
+      </form>
+      <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--ink-500);">Cupos limitados para el lanzamiento.</p>
+    </div>
+  </section>
+
+  <!-- QUÉ VAS A APRENDER (BENTO GRID) -->
+  <section class="section" style="padding-block: 4rem;">
+    <div class="container">
+      <div class="section-head" style="text-align: center; margin-inline: auto;">
+        <span class="eyebrow">Temario del Programa</span>
+        <h2>Cómo escalar a $10k/mes</h2>
+      </div>
+
+      <div class="bento">
+        <article class="card card--hero" style="grid-area: a; background: linear-gradient(160deg, var(--brand-900), var(--brand-500));">
+          <span class="card-icon">🎯</span>
+          <h3>Oferta Irresistible</h3>
+          <p>Cómo estructurar un servicio de alto ticket que los clientes compren sin dudar.</p>
+        </article>
+        <article class="card card--b" style="grid-area: b;">
+          <span class="card-icon">🤝</span>
+          <h3>Adquisición de Clientes</h3>
+          <p>Estrategias B2B en LinkedIn y cold outreach que realmente funcionan.</p>
+        </article>
+        <article class="card card--c" style="grid-area: c;">
+          <span class="card-icon">📈</span>
+          <h3>Ventas Consultivas</h3>
+          <p>Llama a los clientes sin miedo y cierra contratos de 4 o 5 cifras.</p>
+        </article>
+        <article class="card card--d" style="grid-area: d;">
+          <span class="card-icon">👑</span>
+          <h3>Autoridad y Marca</h3>
+          <p>Posicionamiento en redes para que los clientes lleguen a ti solos.</p>
+        </article>
       </div>
     </div>
-  </main>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="section" style="padding-bottom: 6rem;">
+    <div class="container">
+      <div class="cta-band" style="text-align: center;">
+        <h2>Tu conocimiento vale más de lo que crees.</h2>
+        <p>Únete a la lista de espera y sé el primero en enterarte cuando abramos el programa.</p>
+        <a href="#" class="btn btn--accent btn--lg" style="margin-top: 1.5rem;" onclick="document.querySelector('.field').focus(); return false;">Quiero estar listo</a>
+      </div>
+    </div>
+  </section>
+
 </body>
 </html>
