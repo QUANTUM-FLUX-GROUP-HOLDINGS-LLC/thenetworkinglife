@@ -1,0 +1,30 @@
+<section class="training-card is-hidden" id="trainingCard">
+    <div class="video-wrapper">
+      <video id="player" playsinline preload="metadata" disablepictureinpicture oncontextmenu="return false;">
+        <source src="" type="video/mp4">
+      </video>
+
+      <div class="custom-video-controls">
+        <button id="playPauseButton" class="video-toggle" type="button" aria-label="Play video">
+          <svg id="icon-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="icon-pause" viewBox="0 0 24 24" fill="currentColor" style="display: none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+      </div>
+
+      <!-- Overlay para Preguntas y CTA (Aquí es donde vive la lógica del embudo) -->
+      <div class="overlay" id="overlay" style="display: none;">
+        <div class="overlay-content" id="overlayContent"></div>
+      </div>
+    </div>
+
+    <!-- Barra de Progreso del Embudo -->
+    <div class="progress-panel">
+      <div class="progress-copy">
+        <span id="stageLabel">Paso 1 de 3</span>
+        <strong id="stageTitle">Mira el video inicial</strong>
+      </div>
+      <div class="progress-track">
+        <span id="progressBar"></span>
+      </div>
+    </div>
+  </section>
